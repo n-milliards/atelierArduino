@@ -142,7 +142,7 @@ void tourner(float fraction)
     short int sens = (fraction > 0) ? 1 : -1;
 
     // Défini la durée nécessaire pour accomplir la rotation demandée
-    float duree =  fraction * 3.1415 * (float) (ECARTEMENT_ROUES) / DISTANCE_PAR_SECONDE;
+    float duree =  abs((float) fraction) * 3.1415 * (float) (ECARTEMENT_ROUES) / DISTANCE_PAR_SECONDE;
     duree -= CORRECTION_TOURNER;
     
     // Défini la commande à appliquer sur les moteurs
